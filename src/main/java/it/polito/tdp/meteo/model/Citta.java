@@ -7,12 +7,17 @@ public class Citta {
 	
 	private String nome;
 	private List<Rilevamento> rilevamenti;
+	private int mese;
 	private int counter = 0;
-	
 	
 	
 	public Citta(String nome) {
 		this.nome = nome;
+	}
+	
+	public Citta(String nome, int mese) {
+		this.nome = nome;
+		this.mese = mese;
 	}
 	
 	public Citta(String nome, List<Rilevamento> rilevamenti) {
@@ -38,6 +43,14 @@ public class Citta {
 
 	public int getCounter() {
 		return counter;
+	}
+	
+	public int getMese() {
+		return mese;
+	}
+
+	public void setMese(int mese) {
+		this.mese = mese;
 	}
 
 	public void setCounter(int counter) {

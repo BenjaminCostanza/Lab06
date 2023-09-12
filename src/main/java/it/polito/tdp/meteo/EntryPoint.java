@@ -2,6 +2,8 @@ package it.polito.tdp.meteo;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+
+import it.polito.tdp.meteo.model.Model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,10 +25,13 @@ public class EntryPoint extends Application {
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
 
         controller = loader.getController();
-    	
-        // TODO impostare il model nel controller        
         
-        stage.setTitle("JavaFX and Maven");
+        //Imposto model nel controller
+        Model model = new Model();
+    	controller.setModel(model);
+    	     
+        
+        stage.setTitle("Analisi dati meteorologici");
         stage.setScene(scene);
         stage.show();
         
